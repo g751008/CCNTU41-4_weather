@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "天氣預報";
+    Layout = "~/Views/Shared/_LayoutWeather.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <!--各縣市清單-->
+    @foreach (string City in ViewData["City"] as List<String>)
+    {
+        <div>
+            <!--各縣市天氣圖-->
+            <img src="@Url.Action("Chart", "Weather", new { City=City})" alt="@City 一週天氣預報曲線圖" />
+        </div>
+    }
+</body>
+</html>
