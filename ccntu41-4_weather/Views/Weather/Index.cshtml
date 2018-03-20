@@ -15,7 +15,7 @@
     @foreach (string City in ViewData["City"] as List<String>)
     {
         <div>
-            <!--各縣市天氣圖-->
+            <!-- 各縣市天氣圖 -->
             <img src="@Url.Action("Chart", "Weather", new { City=City})" alt="@City 一週天氣預報曲線圖" />
         </div>
     }
